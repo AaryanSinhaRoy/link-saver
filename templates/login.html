@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sign in to LinkSaver</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="text-center display-4">Log in to <span class="badge badge-dark">LinkSaver</span> </div>
+<br>
+	<div class="container  text-center ">
+<form  action="/process_login" method="POST" autocomplete="off">
+	 <label for="usrname">Enter username:<input type="text" name="usrname"> </label>
+	 <br>
+	 <label for="pswrd">Enter password:<input type="password" name="pswrd"> </label>
+	 <br>
+	 <input type="submit" value="login" class="btn btn-primary">
+</form>
+</div>
+
+{% if error: %}
+
+<div class="alert  alert-danger">Wrong username or password</div>
+
+{% endif %}
+
+</body>
+</html>

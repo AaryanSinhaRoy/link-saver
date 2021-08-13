@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sign up to LinkSaver</title>
+
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="text-center display-4">Sign up in to <span class="badge badge-dark">LinkSaver</span> </div>
+<br>
+<div class="container  text-center ">
+<form  action="/process_signup" method="POST" autocomplete="off">
+	 <label for="usrname">Enter username:<input type="text" name="usrname"> </label><br>
+	 <label for="pswrd">Enter password:<input type="password" name="pswrd"> </label><br>
+	 <label for="pswrd">Re-enter password:<input type="password" name="conf-pswrd"> </label><br>
+	 <input type="submit" value="signup" class="btn btn-primary">
+</form>
+</div>
+</body>
+</html>
