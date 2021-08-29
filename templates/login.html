@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Sign in to LinkSaver</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -14,9 +15,9 @@
 <br>
 	<div class="container  text-center ">
 <form  action="/process_login" method="POST" autocomplete="off">
-	 <label for="usrname">Enter username:<input type="text" name="usrname"> </label>
+	 <label for="usrname">Enter username:<input type="text" name="usrname" required> </label>
 	 <br>
-	 <label for="pswrd">Enter password:<input type="password" name="pswrd"> </label>
+	 <label for="pswrd">Enter password:<input type="password" name="pswrd" required> </label>
 	 <br>
 	 <input type="submit" value="login" class="btn btn-primary">
 </form>
