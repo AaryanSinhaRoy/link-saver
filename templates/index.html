@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Link Saver</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="jumbotron jumbotron-fluid text-center display-3"><span class="badge badge-dark">LinkSaver</span></div>
+
+<center>
+	<form  action="/newlink" method="POST" autocomplete="off">
+	 <label for="thelink">Enter the link:<input type="text" name="thelink" required> </label>
+	 <input type="submit" value="Save" class="btn btn-primary">
+	  </form>
+</center>
+<h4 class="display-5">Welcome {{username}}</h4>
+
+<br>
+{% if linkerror: %}
+	<div class="alert alert-warning">Please enter a valid URL</div>
+{% endif %}
+
+<a href="/logout"><input type="button" value="Logout" class="btn btn-warning"></a> 
+<a href="/changepassword"><input type="button" value="Change password" class="btn btn-secondary"></a> 
+
+<br>
+
+{% if flag: %}
+ <div class="alert alert-warning">Error, please copy and paste the link while saving.</div>
+{% endif %}
+
+{% for x in resdata: %}
+<hr>
+<div class="text-center">
+<a href="{{x.thelink}}"><h2>{{x.linkname}}</h2></a> &nbsp;&nbsp; <a href="/deletelink/{{x.id}}"><input type="button" value="delete" class="btn btn-danger"></a>
+</div>
+<br>
+{% endfor %}
+
+</body>
+</html>
